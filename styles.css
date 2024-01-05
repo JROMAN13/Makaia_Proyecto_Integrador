@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Manrope&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap");
 
 :root {
   --cormorant: "Cormorant Garamond";
+  --cormorant-semibold: "CormorantGaramond-SemiBold";
   --manrope: "Manrope";
   --background-section1: #093931;
   --color-texto1: #f5d38e;
@@ -18,13 +19,12 @@
 }
 
 .homepage {
-  background-color:var(--color-texto3);
+  background-color: var(--color-texto3);
   width: 1440px;
   height: 4583px;
 }
 
 .section1 {
-  width: 1440px;
   height: 821px;
   background-color: var(--background-section1);
   background-image: url(./assets/img/olas_blancas.png);
@@ -32,10 +32,9 @@
 }
 
 .header {
-  width: 1440px;
   height: 62px;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
 .header__p {
@@ -159,3 +158,91 @@
   width: 31px;
   height: 31px;
 }
+      /* //////////////  SECTION 2  ////////*/
+.section2 {
+  width: 1440px;
+  height: 232px;
+  position: relative;
+  overflow: hidden;
+}
+
+.services__icon {
+  width: 62px;
+  height: 62px;
+  position: absolute;
+  top: 36px;
+  overflow: visible;
+}
+
+.services__icon-1 {
+  left: calc(50% - 433px);
+}
+
+.services__icon-2 {
+  left: calc(50% - 30px);
+}
+.services__icon-3 {
+  left: calc(50% - -373px);
+}
+
+.services__title {
+  color: #171a1f;
+  text-align: center;
+  font-family: var(--cormorant-semibold);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  position: absolute;
+  top: 116px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+}
+
+.services__title-1 {
+  left: calc(50% - 436px);
+  width: 70px;
+}
+
+.services__title-2 {
+  left: calc(50% - 58px);
+  width: 120px;
+}
+
+.services__title-3 {
+  left: calc(50% - -334px);
+  width: 143px;
+}
+
+.services__text {
+  color: #9095a0;
+  text-align: center;
+  font-family: var(--manrope);
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  position: absolute;
+  top: 144px;
+  width: 276px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1);
+}
+
+.services__text-1 {
+  left: calc(50% - 540px);
+}
+
+.services__text-2 {
+  left: calc(50% - 137px);
+}
+
+.services__text-3 {
+  left: calc(50% - -266px);
+  height: 40px;
+}
+
+ /* //////////////  SECTION 3 ////////*/
+.section3 {
+  height: 506px;
+}
+
+
