@@ -154,7 +154,7 @@
 
 .iconbutton__play {
   position: absolute;
-  transform: translate(10px, 10px);
+  transform: translate(12px, 9px);
   width: 31px;
   height: 31px;
 }
@@ -335,7 +335,7 @@
 }
 
 .collections__title {
-  color: #0d554a;
+  color: var(--color-texto-s3);
   text-align: center;
   font-family: var(--cormorant);
   font-size: 40px;
@@ -451,6 +451,7 @@
 
 .section5 {
   height: 554px;
+  background-color: #fafafb;
 }
 
 .s5 {
@@ -460,3 +461,33 @@
 .featured__p-s5 {
   color: #424955;
 }
+
+/* //////////////  SECTION 6 ////////*/
+.section6 {
+  background-color: #fafafb;
+  height: 564px;
+  position: relative;
+}
+
+.story__img {
+  border-radius: 8px;
+  height: 368px;
+  position: absolute;
+  right: 132px;
+  left: 132px;
+  top: 124px;
+  object-fit: cover;
+}
+
+.collections__title-story {
+  left: calc(50% - 141px);
+}
+
+.images__iconbutton-story {
+  background: var(--color-texto3);
+  left: calc(50% - 26px);
+  top: calc(50% - 0px);
+  overflow: hidden;
+}
+
+
