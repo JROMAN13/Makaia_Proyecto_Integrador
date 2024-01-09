@@ -602,7 +602,7 @@
 
 /* //////////////  FOOTER ////////*/
 .footer {
-  background-color: black;
+  background-color: var(--background-section1);
   height: 234px;
   position: relative;
 }
