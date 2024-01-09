@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
+
 
 :root {
   --cormorant: "Cormorant Garamond";
@@ -240,7 +242,7 @@
   height: 40px;
 }
 
-/* //////////////  SECTION 3 ////////*/
+/* -----------------------  SECTION 3 -----------------------*/
 .section3 {
   height: 506px;
 }
@@ -292,10 +294,10 @@
   width: 276px;
   height: 410px;
   flex-shrink: 0;
-  top: 48px;
+  margin-top: 48px;
   left: 444px;
   border-radius: 8px;
-  background: #fff;
+  background: var(--color-texto3);
   box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
 }
 
@@ -447,21 +449,28 @@
   border-color: var(--color-texto-s3);
 }
 
-/* //////////////  SECTION 5 ////////*/
+/* ---------------------------------  SECTION 5 ---------------------------------*/
 
 .section5 {
   height: 554px;
   background-color: #fafafb;
+
 }
 
 .s5 {
   margin-left: 132px;
 }
 
+.featured__title-1 {
+  margin-top: 78px;
+}
 .featured__p-s5 {
   color: #424955;
 }
 
+.card__content1 {
+  margin-top: 72px;
+}
 /* //////////////  SECTION 6 ////////*/
 .section6 {
   background-color: #fafafb;
@@ -490,7 +499,7 @@
   overflow: hidden;
 }
 
-/* //////////////  SECTION 7 ////////*/
+/* ----------------------------  SECTION 7 ----------------------*/
 .section7 {
   height: 522px;
   background-color: var(--background-section1);
@@ -519,12 +528,11 @@
   font-weight: 600;
   width: 311px;
   height: 68px;
-  
 }
 
 .section7__p {
   width: 264px;
-  color: #ffffff;
+  color: var(--color-texto3);
   top: 249px;
   font-size: 16px;
   font-weight: 400;
@@ -560,7 +568,7 @@
 }
 
 .section7__card__h3 {
-  color: #fff;
+  color: var(--color-texto3);
   font-family: var(--manrope);
   font-size: 20px;
   margin-left: 36px;
@@ -568,7 +576,7 @@
 
 .section7__card__country {
   margin-left: 36px;
-  color: #ffffff;
+  color: var(--color-texto3);
 }
 /*--------------------------------------------------------------------*/
 
