@@ -490,4 +490,107 @@
   overflow: hidden;
 }
 
+/* //////////////  SECTION 7 ////////*/
+.section7 {
+  height: 522px;
+  background-color: var(--background-section1);
+  position: relative;
+}
 
+.section7__container {
+  justify-content: space-around;
+  overflow: hidden;
+  display: flex;
+  position: absolute;
+  height: 522px;
+}
+
+.s7 {
+  margin-left: 132px;
+  width: 311px;
+}
+.section7__title {
+  font-family: var(--cormorant);
+  color: var(--color-texto3);
+  font-style: normal;
+  font-size: 48px;
+  line-height: 68px;
+  margin-top: 169px;
+  font-weight: 600;
+  width: 311px;
+  height: 68px;
+  
+}
+
+.section7__p {
+  width: 264px;
+  color: #ffffff;
+  top: 249px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  font-family: var(--manrope);
+  margin-top: 12px;
+  
+}
+
+/*---------------- card sesion 7 ------------------*/
+
+.section7__card {
+  margin-top: 72px;
+  width: 696px;
+  height: 375px;
+  margin-left: 169px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: rgba(23, 26, 31, 0.3);
+  overflow: hidden;
+  display: flex;
+}
+
+.section7__card__body {
+  flex-direction: column;
+}
+
+.section7__card__p {
+  margin-left: 36px;
+  margin-top: 60px;
+  margin-bottom: 125px;
+  width: 324px;
+}
+
+.section7__card__h3 {
+  color: #fff;
+  font-family: var(--manrope);
+  font-size: 20px;
+  margin-left: 36px;
+}
+
+.section7__card__country {
+  margin-left: 36px;
+  color: #ffffff;
+}
+/*--------------------------------------------------------------------*/
+
+.section7__card__button {
+  margin-top: 421px;
+  margin-left: 1150px;
+  transform-origin: 0;
+  display: flex;
+  position: absolute;
+}
+
+.section7_button {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  margin-top: 117.5;
+  margin-right: 18px;
+  border-radius: 26px;
+  padding: 10.5px;
+  justify-content: space-around;
+  align-items: center;
+  flex-shrink: 0;  
+  border: 1px solid #effdfa;
+  background: rgba(0, 0, 0, 0);
+}
