@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap");
 
-
 :root {
   --cormorant: "Cormorant Garamond";
   --manrope: "Manrope";
@@ -16,13 +15,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 .homepage {
   background-color: var(--color-texto3);
-  width: 1440px;
-  height: 4583px;
+  /* width: 1440px;
+  height: 4583px; */
 }
 
 .section1 {
@@ -161,7 +160,6 @@
 }
 /* //////////////  SECTION 2  ////////*/
 .section2 {
-  width: 1440px;
   height: 232px;
   position: relative;
   overflow: hidden;
@@ -453,7 +451,6 @@
 .section5 {
   height: 554px;
   background-color: #fafafb;
-
 }
 
 .s5 {
@@ -711,23 +708,23 @@
   top: calc(50% - 7.5px);
 }
 
-.footer__icon-twitter{
+.footer__icon-twitter {
   right: 252px;
 }
 
-.footer__icon-face{
+.footer__icon-face {
   right: 212px;
 }
 
-.footer__icon-linkedin{
+.footer__icon-linkedin {
   right: 172px;
 }
 
-.footer__icon-youtube{
+.footer__icon-youtube {
   right: 132px;
 }
 
-.footer__btn{
+.footer__btn {
   background: var(--color-texto2);
   border-radius: 0px 18px 18px 0px;
   width: 114px;
@@ -740,7 +737,7 @@
   overflow: hidden;
 }
 
-.footer__btn-text{
+.footer__btn-text {
   color: #6b4a09;
   text-align: left;
   font-family: var(--manrope);
@@ -752,7 +749,7 @@
   top: calc(50% - 11px);
 }
 
-.footer__btn-text-copy{
+.footer__btn-text-copy {
   color: var(--color-texto3);
   top: 187px;
   left: 132px;
@@ -761,6 +758,18 @@
   transform: rotate(0deg) scale(1, 1);
 }
 
+@media screen and (max-width: 1366px) {
+  .homepage {
+    overflow: hidden;
+  }
 
+  .header__p,
+  .section1__parrafo,
+  .section1__button {
+    margin-left: 5%;
+  }
 
-
+  .nav__rectangle {
+    transform: translate(-100%, 30%);
+  }
+}
