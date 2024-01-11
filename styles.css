@@ -957,9 +957,9 @@
     width: 90%;
   }
 
-   /*----------- section 7 ------------*/
+  /*----------- section 7 ------------*/
 
-   .section7__container {
+  .section7__container {
     display: flex;
     justify-content: left;
   }
@@ -1025,7 +1025,7 @@
     right: 15%;
   }
 
-  .footer__subscribe-desc{
+  .footer__subscribe-desc {
     right: 13%;
   }
   .footer__subscribe-input {
@@ -1043,5 +1043,165 @@
   .footer__icon-mail {
     left: -19%;
     top: 25%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__p {
+    margin-right: 26%;
+  }
+
+  .nav__rectangle {
+    transform: translate(-665%, 30%);
+  }
+
+  .section1__parrafo {
+    font-size: 3rem;
+    width: 40%;
+  }
+
+  .section1__images {
+    left: 47.5%;
+    top: 25%;
+  }
+
+  .images__imagebig {
+    width: 43%;
+    height: 70%;
+  }
+
+  .images__imagesmall {
+    width: 38%;
+    height: 54%;
+    top: 12%;
+    left: 31%;
+  }
+
+  .images__iconbutton {
+    right: 48%;
+    top: 33%;
+    width: 6%;
+    height: 6%;
+  }
+
+  .iconbutton__play {
+    width: 85%;
+    height: 78%;
+    transform: translate(12%, 18%);
+  }
+
+  /* ----------SECTION 3 Y 5 ---------*/
+  .content {
+    margin-left: -12%;
+    justify-content: flex-start;
+  }
+
+  .featured__title,
+  .featured__p {
+    margin-left: 0;
+    width: 130%;
+  }
+
+  .section1__button-featured {
+    margin-left: 0%;
+    padding: 5% 15%;
+    margin-top: 25%;
+  }
+
+  .card__content {
+    width: 28%;
+    margin-right: 5%;
+  }
+
+  .card__content-1 {
+    margin-left: 5%;
+  }
+
+  .card__h3 {
+    font-size: 1.3rem;
+  }
+
+  .featured__title-1 {
+    width: 120%;
+  }
+  .featured__p-s5 {
+    width: 120%;
+    margin-top: 50%;
+    margin-bottom: 20%;
+  }
+
+  /*----------- SECTION 6 ------------*/
+
+  .images__iconbutton-story{
+    top:50%;
+    left:50%;
+  }
+
+  /*----------- SECTION 7 ------------*/
+
+  .section7__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .s7 {
+    margin-left: 0;
+  }
+
+  .section7__title {
+    margin-top: 0%;
+    font-size: 2.6rem;
+  }
+
+  .section7__p {
+    font-size: 0.8rem;
+    width: 80%;
+  }
+
+  .section7__card {
+    margin-top: 5%;
+    margin-left: -5%;
+    width: 80%;
+    height: 50%;
+  }
+
+  .section7__card__p {
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-bottom: 20%;
+    font-size: 0.8rem;
+    line-height: 190%;
+  }
+
+  .section7__card__h3 {
+    margin-left: 10%;
+    font-size: 0.9rem;
+  }
+
+  .section7__card__country {
+    margin-left: 10%;
+    font-size: 0.8rem;
+    line-height: 1%;
+  }
+  .section7__card__button {
+    margin-left: 58%;
+  }
+
+  .section7_button {
+    width: 30%;
+    height: 30%;
+    margin-top: 20%;
+  }
+
+  /*  FOOTER */
+  .footer__item-contact,
+  .footer__item-privacy,
+  .footer__item-terms{
+    left: 41%;
+  }
+
+  .footer__item-shop, .footer__item-collections, .footer__item-about{
+    left: 27%;
   }
 }
