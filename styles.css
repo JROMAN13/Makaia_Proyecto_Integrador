@@ -1481,19 +1481,20 @@ label {
   .s5 {
     margin-top: 68%;
     text-align: center;
+    margin-left: 5%;
   }
 
   .featured__title-1 {
     width: 80%;
     line-height: 90%;
-    margin-left: 11.5%;
+    margin-left: 10%;
     margin-top: 30%;
     margin-bottom: 10%;
   }
 
   .featured__p-s5 {
     width: 68%;
-    margin-left: 18%;
+    margin-left: 16%;
   }
 
   .card__content1 {
