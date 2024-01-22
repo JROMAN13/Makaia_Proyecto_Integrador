@@ -123,8 +123,8 @@ label {
 }
 
 .icon__forward {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.5vw;
+  height: 1.5vw;
   overflow: visible;
 }
 
@@ -419,8 +419,8 @@ label {
 }
 
 .icon__down {
-  width: 20px;
-  height: 20px;
+  width: 1.5vw;
+  height: 1.5vw;
   top: 12px;
   left: 246px;
 }
