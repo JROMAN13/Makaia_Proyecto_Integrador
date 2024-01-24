@@ -1,11 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="../styles/product_list.css">
+
 </head>
+
 <body>
-    
+    <div class="container">
+        <section class="section section1">
+            <header class="header">
+                <p class="header__p">Darling.</p>
+                <nav class="header__nav">
+                    <input type="checkbox" id="toggle-menu" />
+                    <label for="toggle-menu" class="button_menu show_menu"> ☰ </label>
+                    <label for="toggle-menu" class="button_menu hide_menu"> X </label>
+                    <ul class="nav__ul">
+                        <li class="nav__li"><a href="#" class="nav__a">Home</a></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Shop</a></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Collections</a></li>
+                        <li class="nav__li"><a href="#" class="nav__a">About</a></li>
+                        <li class="nav__li"><a href="#" class="nav__a">Contact</a></li>
+                        <li class="nav__li">
+                            <a href="#" class="nav__a"><img src="../assets/img/Profile1.png" class="li__icon"
+                                    alt="" /></a>
+                        </li>
+                        <li class="nav__li">
+                            <a href="#" class="nav__a"><img src="../assets/img/Shopping.png" class="li__icon"
+                                    alt="" /></a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container__section">
+                <p class="section1__title">Our Products</p>
+                <div class="container__search__bar">
+                    <div class="search__bar">
+                        <button><img src="../assets/img/img_view2/Search.png" alt="" class="search__img"></button>
+                    </div>
+                    <input type="text" name="" id="" placeholder="Find jewelry you like">
+                </div>
+            </div>
+        </section>
+
+        <section class="section section2">
+            <div class="container__filter">
+                <div class="filter">
+                    <nav class="filter__nav">
+                        <li class="filter__nav__li"><a class="nav__li__a" href="">All</a></li>
+                        <li class="filter__nav__li"><a class="nav__li__a" href="">Rings</a></li>
+                        <li class="filter__nav__li"><a class="nav__li__a" href="">Bracelets</a></li>
+                        <li class="filter__nav__li"><a class="nav__li__a" href="">Necklaces</a></li>
+                        <li class="filter__nav__li"><a class="nav__li__a" href="">Earrings</a></li>
+                    </nav>
+                </div>
+                <div>
+                    <select id="sortByPrice">
+                        <option value="price">Sort by Price</option>
+                        <option value="todos">100</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="textbox-22">
+                <!-- <svg
+                  class="vector33"
+                  width="138"
+                  height="2"
+                  viewBox="0 0 138 2"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 1H138" stroke="#9095A0" />
+                </svg>
+                <div class="sort-by-price">Sort by price</div>
+                <svg
+                  class="chevron-down-large"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3.07273 4.66675L2 5.73947L8 11.7395L14 5.73947L12.9273 4.66675L8 9.59399L3.07273 4.66675Z"
+                    fill="#171A1F"
+                  />
+                </svg> -->
+
+            </div>
+            <div class="container__cards">
+                <div class="card">
+                    <img src="../assets/img/img_view2/img1.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img2.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/Img3.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img4.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img5.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img6.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img7.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img8.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img9.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img10.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img11.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img12.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+                <div class="card">
+                    <img src="../assets/img/img_view2/img13.png" alt="Producto 2" />
+                    <h3 class="card__h3">Exquisite Earrings</h3>
+                    <span class="card__price">$125.28</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
 </body>
+
 </html>
