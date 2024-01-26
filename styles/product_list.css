@@ -73,13 +73,13 @@ label {
 }
 
 .li__icon {
-  width: 2.5vw;
+  width: 1.389vw;
 }
 
 .nav__a {
   text-decoration: none;
   color: var(--color-texto3);
-  font-size: 1.6vw;
+  font-size: 0.972vw;
   font-family: var(--manrope);
   cursor: pointer;
 }
@@ -245,23 +245,28 @@ label {
   background-color: #9095A0;
 }
 
+
 .container__cards {
   margin-top: 3.333vw;
   display: grid;
-  gap: 2%;
-  grid-template-columns: repeat(auto-fill, minmax(19.167vw, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(276px, 1fr));
+  grid-gap: 2%;
+  margin-bottom: 10%;
+  flex-wrap: wrap;
 }
 
 .card {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
-  height: 28.056vw; 
+  margin-bottom: 5%;
+  height: 28.056vw;
   width: 19.167vw;
   border-radius: 8px;
   background: var(--color-texto3);
   box-shadow: 0px 0px 1px 0px rgba(23, 26, 31, 0.07), 0px 0px 2px 0px rgba(23, 26, 31, 0.12);
 }
+
 
 .card__big {
   width: 40vw;
@@ -299,9 +304,42 @@ label {
   line-height: 26px;
 }
 
+.pages {
+  margin-top: 17%;
+  margin-left: 35%;
+  margin-bottom: 4.306vw;
+  width: 348px;
+  height: 44px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.pages a {
+  text-decoration: none;
+  color: #9095A0;
+  font-family: Manrope;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  /* 162.5% */
+}
+
+.pages__border {
+  align-items: center;
+  width: 41px;
+  height: 44px;
+  padding: 8px 15px;
+  border-radius: 21px;
+  border: 1px solid var(--color-texto-s3);
+  color: var(--color-texto-s3);
+  background: rgba(0, 0, 0, 0.00);
+}
+
 /* ------------------- SECTION 3 -------------- */
 .section3 {
-  width: 1440px;
   height: 232px;
   position: relative;
 }
@@ -321,6 +359,7 @@ label {
 .services__icon-2 {
   left: calc(50% - 30px);
 }
+
 .services__icon-3 {
   left: calc(50% - -373px);
 }
@@ -379,8 +418,10 @@ label {
   left: calc(50% - -266px);
   height: 40px;
 }
+
 /* ----------------  FOOTER ---------- */
 .footer {
+  margin-top: 45px;
   background: var(--background-section1);
   padding: 2vw;
 }
