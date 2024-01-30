@@ -116,16 +116,30 @@ console.log("Productos ordenados de mayor a menor precio " ,sortedProducts2);
 // cantidad por el precio de cada producto. Ejecutar la función con datos de prueba y
 // mostrar el resultado en la consola del navegador.
 
-const totalBuy = products.reduce((total, product) => total + (product.stockSize * product.price),0 );
 
-products.forEach((product) => {
-  const stockValues = Object.values(product.stockSize);
-  const totalStock = stockValues.reduce((acc, currentValue) => acc + currentValue, 0)
-  const inventoryValue = totalStock * product.price;
+// products.forEach((product) => {
+//   const stockValues = Object.values(product.stockSize);
+//   const totalStock = stockValues.reduce((acc, currentValue) => acc + currentValue, 0)
+//   const inventoryValue = totalStock * product.price;
 
-  console.log(`El total de stock para el producto ${product.name} es: ${inventoryValue}`);
-  
-});
+//   console.log(`El total de stock para el producto ${product.name} es: ${inventoryValue}`);
+
+// });
+
+// Solicitar al usuario el nombre y la cantidad
+const nombreProducto = "Serene Solitaire Earrings";
+const cantidad = 3;
+
+// Buscar el producto en el array
+const productoBuscado = products.find((p) => p.name === nombreProducto);
+
+if (productoBuscado) {
+  // Calcular el total
+  const totalCompra = cantidad * productoBuscado.price;
+  console.log("El total a pagar es: $" + totalCompra.toFixed(3));
+} else {
+  console.log("Producto no encontrado");
+}
 
 
 
@@ -133,18 +147,5 @@ products.forEach((product) => {
 
 
 
-// console.log("El total de la compra es: ", totalBuy);
 
-
-// const pruStock = products.map(stock => {return stock.stockSize[]});
-// console.log(pruStock);
-
-// let pru = products.reduce((total, product) => {return product.stockSize});
-// console.log(pru);
-
-// let pru2 = products.map(product => {return product.price});
-// console.log(pru2);
-
-// let pru3= pru * pru2;
-// console.log(pru3);
 
