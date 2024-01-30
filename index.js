@@ -116,30 +116,33 @@ console.log("Productos ordenados de mayor a menor precio " ,sortedProducts2);
 // cantidad por el precio de cada producto. Ejecutar la función con datos de prueba y
 // mostrar el resultado en la consola del navegador.
 
-const calcularTotalCompra = (nombreProducto, cantidad) => {
-  // Buscar el producto en el array
-  const productoBuscado = products.find((p) => p.name === nombreProducto);
-  
-  if (productoBuscado) {
-    // Calcular el total
-    const totalCompra = cantidad * productoBuscado.price;
-    console.log("El total a pagar es: $" + totalCompra.toFixed(3));
-  } else {
-    console.log("Producto no encontrado");
-  }
+const calcularTotalCompraMultiple = (productos) => {
+  const totalCompra = productos.reduce((total, producto) => {
+    const productoBuscado = products.find((p) => p.name === producto.nombre);
+
+    if (productoBuscado) {
+      return total + producto.cantidad * productoBuscado.price;
+    } else {
+      console.log(`Producto no encontrado: ${producto.nombre}`);
+      return total;
+    }
+  }, 0);
+
+  console.log("El total a pagar es: $" + totalCompra.toFixed(3));
 }
-// Luego se llama a la función:
-calcularTotalCompra("Divine Diamonds", 3);
+
+// Llamar a la función
+
+calcularTotalCompraMultiple([
+  { nombre: "Divine Diamonds", cantidad: 2 },
+  { nombre: "Serene Solitaire Earrings", cantidad: 2 }
+]);
 
 
-// products.forEach((product) => {
-//   const stockValues = Object.values(product.stockSize);
-//   const totalStock = stockValues.reduce((acc, currentValue) => acc + currentValue, 0)
-//   const inventoryValue = totalStock * product.price;
 
-//   console.log(`El total de stock para el producto ${product.name} es: ${inventoryValue}`);
 
-// });
+
+
 
 
 
