@@ -116,16 +116,6 @@ console.log("Productos ordenados de mayor a menor precio " ,sortedProducts2);
 // cantidad por el precio de cada producto. Ejecutar la función con datos de prueba y
 // mostrar el resultado en la consola del navegador.
 
-
-// products.forEach((product) => {
-//   const stockValues = Object.values(product.stockSize);
-//   const totalStock = stockValues.reduce((acc, currentValue) => acc + currentValue, 0)
-//   const inventoryValue = totalStock * product.price;
-
-//   console.log(`El total de stock para el producto ${product.name} es: ${inventoryValue}`);
-
-// });
-
 // Solicitar al usuario el nombre y la cantidad
 const nombreProducto = "Serene Solitaire Earrings";
 const cantidad = 3;
@@ -140,6 +130,18 @@ if (productoBuscado) {
 } else {
   console.log("Producto no encontrado");
 }
+
+
+// products.forEach((product) => {
+//   const stockValues = Object.values(product.stockSize);
+//   const totalStock = stockValues.reduce((acc, currentValue) => acc + currentValue, 0)
+//   const inventoryValue = totalStock * product.price;
+
+//   console.log(`El total de stock para el producto ${product.name} es: ${inventoryValue}`);
+
+// });
+
+
 
 
 
