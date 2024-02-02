@@ -783,6 +783,7 @@ label {
   font-weight: 400;
   padding: 0.4vw;
   left: 16vw;
+  border: none;
 }
 
 .footer__networks {
@@ -803,6 +804,51 @@ label {
 .texts1__copyright-copy {
   margin-left: 9vw;
 }
+
+
+/* -----------------------    MODAL CAR --------------------------------------- */
+.modal-navbar {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 250px;
+  height: 100vh;
+  padding: 28px 24px;
+}
+.modal-navbar__background {
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  display: none;
+}
+.modal-navbar__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  list-style: none;
+  margin-top: 50px;
+}
+.modal-navbar__link {
+  text-decoration: none;
+  color: hsl(220deg, 13%, 13%);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.modal-navbar__close-icon:hover {
+  cursor: pointer;
+}
+.show {
+  display: flex;
+  justify-content: flex-end;
+}
+.display-none{
+  display: none;
+}
+
 
 /* -------------------- RESPONSIVE------------------ */
 

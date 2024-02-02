@@ -12,7 +12,7 @@
 
         <header class="header">
           <p class="header__p">Darling.</p>
-          <nav class="header__nav">
+          <nav class="header__nav" aria-label="">
             <input type="checkbox" id="toggle-menu">
             <label for="toggle-menu" class="button_menu show_menu"> ☰ </label>
             <label for="toggle-menu" class="button_menu hide_menu"> X </label>
@@ -23,7 +23,7 @@
               <li class="nav__li"><a href="#" class="nav__a">About</a></li>
               <li class="nav__li"><a href="#" class="nav__a">Contact</a></li>
               <li class="nav__li"><a href="#" class="nav__a"><img src="../assets/img/Profile1.png" class="li__icon" alt=""/></a></li>
-              <li class="nav__li"><a href="#" class="nav__a"><img src="../assets/img/Shopping.png" class="li__icon" alt=""/></a></li>            
+              <li class="nav__li"><a href="#" class="nav__a"><img src="../assets/img/Shopping.png" class="li__icon" id="btnShopping" alt=""/></a></li>            
               
             </ul>
   
@@ -266,6 +266,23 @@
        
         
       </footer>
+
+       <!-- inicio modal navbar -->
+       <div class="modal-navbar__background">
+        <nav class="modal-navbar" aria-label="">
+          <img class="modal-navbar__close-icon" src="../assets/img/icon-close.svg" alt="" srcset="">
+          <ul class="modal-navbar__items">
+            <li><a class="modal-navbar__link" href="#">Collections</a></li>
+            <li><a class="modal-navbar__link" href="#">Men</a></li>
+            <li><a class="modal-navbar__link" href="#">Women</a></li>
+            <li><a class="modal-navbar__link" href="#">About</a></li>
+            <li><a class="modal-navbar__link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- final modal navbar -->
+
     </div>
+    <script src="../scripts/cart.js"></script>
   </body>
 </html>
