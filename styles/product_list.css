@@ -193,6 +193,11 @@ input.image_buscar {
   border-right-color: #9aefe2;
 }
 
+.nav__li__a-active{
+  background-color: var(--color-texto-s3);
+  color: var(--color-texto3);
+}
+
 .nav__li__a:hover {
   background-color: var(--color-texto-s3);
   color: var(--color-texto3);
