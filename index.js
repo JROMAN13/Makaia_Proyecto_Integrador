@@ -76,11 +76,10 @@ const products = [
 // accesorio que exista en la lista y, por último, mostrar el resultado en la consola del
 // navegador.
 
-
-const filterProducts = (array, type)=> {
-    const filter = array.filter((object) => object.type === type);
-    console.log ("Resultado de busqueda por tipo de producto", filter);
-}
+const filterProducts = (array, type) => {
+  const filter = array.filter((object) => object.type === type);
+  console.log("Resultado de busqueda por tipo de producto", filter);
+};
 
 filterProducts(products, "earrings");
 
@@ -94,21 +93,20 @@ const searchByName = (array, string) => {
   const stringMin = string.toLowerCase();
 
   const search = array.filter((element) => element.name.toLowerCase().includes(stringMin));
-  console.log ("Resultado de busqueda por cadena ", search);
-}
+  console.log("Resultado de busqueda por cadena ", search);
+};
 
-searchByName(products,"lace")
-
+searchByName(products, "lace");
 
 // Crear una función que ordene un array de productos por precios de manera ascendente
 // y descendente y retorne el array resultante. Ejecutar la función y mostrar el resultado en
 // consola
 
-const sortedProducts = products.toSorted((a,b) => a.price - b.price);
-console.log("Productos ordenados de menor a mayor precio " ,sortedProducts);
+const sortedProducts = products.toSorted((a, b) => a.price - b.price);
+console.log("Productos ordenados de menor a mayor precio ", sortedProducts);
 
-const sortedProducts2 = products.toSorted((a,b) => b.price - a.price);
-console.log("Productos ordenados de mayor a menor precio " ,sortedProducts2);
+const sortedProducts2 = products.toSorted((a, b) => b.price - a.price);
+console.log("Productos ordenados de mayor a menor precio ", sortedProducts2);
 
 // Crear una función que calcule el total a pagar de una compra, reciba como parámetros
 // un array de productos donde cada producto, tenga como propiedades la cantidad y
@@ -129,14 +127,27 @@ const calcularTotalCompraMultiple = (productos) => {
   }, 0);
 
   console.log("El total a pagar es: $" + totalCompra.toFixed(3));
-}
+};
 
 // Llamar a la función
 
 calcularTotalCompraMultiple([
   { nombre: "Divine Diamonds", cantidad: 2 },
-  { nombre: "Serene Solitaire Earrings", cantidad: 2 }
+  { nombre: "Serene Solitaire Earrings", cantidad: 2 },
 ]);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
