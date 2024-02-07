@@ -783,9 +783,9 @@ label {
 /* -----------------------    MODAL CAR --------------------------------------- */
 .modal-navbar {
   background-color: hsl(0deg, 0%, 100%);
-  width: 250px;
+  width: 31vw;
   height: 100vh;
-  padding: 28px 24px;
+  padding: 2vw;
 }
 .modal-navbar__background {
   background-color: hsla(0deg, 0%, 0%, 0.5);
@@ -798,20 +798,7 @@ label {
   overflow: hidden;
   display: none;
 }
-.modal-navbar__items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 200px;
-  list-style: none;
-  margin-top: 50px;
-}
-.modal-navbar__link {
-  text-decoration: none;
-  color: hsl(220deg, 13%, 13%);
-  font-weight: 700;
-  font-size: 1.1em;
-}
+
 .modal-navbar__close-icon:hover {
   cursor: pointer;
 }
@@ -821,6 +808,95 @@ label {
 }
 .display-none {
   display: none;
+}
+
+.container1__title {
+  color: #171a1f;
+  font-family: var(--cormorant);
+  font-size: 1.39vw;
+  font-weight: 700;
+  line-height: 1vw;
+}
+
+.section2__container1 {
+  margin-top: 3vw;
+  width: 100%;
+  display: flex;
+}
+
+.container1__imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  margin-top: 1.4vw;
+  width: 40%;
+}
+
+.container1__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container__summary {
+  width: 100%;
+}
+
+.summary__container__texts {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5vw;
+  margin-top: 2.7vw;
+}
+
+.texts {
+  color: #171a1f;
+  font-family: var(--manrope);
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 1.5vw;
+}
+
+.texts__code {
+  color: #565e6c;
+  font-size: 1.14vw;
+  font-weight: 400;
+}
+
+.summary__icon__trash {
+  width: 1.6vw;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.texts-trash {
+  margin-top: 1vw;
+}
+
+.contain__total{
+  width: 100%;
+  margin-top: 20vh;
+}
+
+.summary__items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+
+.payment__btn{
+  margin-top: 2vw;
+  border-radius: 22px;
+  background: #0d554a;
+  width: 100%;
+  display: inline-flex;
+  padding: 1vw;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-texto3);
+  font-weight: 400;
+  font-size: 1.4vw;
+  border: none;
+  cursor: pointer;
 }
 
 /********************** MEDIA QUERYS *****************************/
