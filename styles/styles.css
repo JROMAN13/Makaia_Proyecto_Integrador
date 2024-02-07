@@ -25,7 +25,7 @@
 .section1 {
   height: 821px;
   background-color: var(--background-section1);
-  background-image: url(./assets/img/olas_blancas.png);
+  background-image: url(../assets/img/olas_blancas.png);
   position: relative;
   padding: 2vw;
 }
