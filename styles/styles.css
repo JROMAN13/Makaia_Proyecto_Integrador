@@ -20,13 +20,6 @@
 
 .homepage {
   background-color: var(--color-texto3);
-  /* width: 1440px;
-  height: 4583px; */
-}
-
-input,
-label {
-  display: none;
 }
 
 .section1 {
@@ -34,60 +27,72 @@ label {
   background-color: var(--background-section1);
   background-image: url(./assets/img/olas_blancas.png);
   position: relative;
+  padding: 2vw;
+}
+
+input,
+label {
+  display: none;
 }
 
 .header {
-  height: 62px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 
 .header__p {
-  display: flex;
-  color: var(--color-texto1);
+  color: #f5d38e;
   font-family: var(--cormorant);
-  font-size: 30px;
-  margin-left: 134px;
-  margin-right: 559px;
+  font-size: 3vw;
+  line-height: 4.5vw;
+  margin-left: 3vw;
 }
 
 .header__nav {
   display: flex;
-  justify-content: right;
 }
 
 .nav__ul {
   display: flex;
-  gap: 30px;
-  margin-right: 132px;
+  gap: 2.2vw;
+  margin-right: 5vw;
 }
 
 .nav__li {
   list-style-type: none;
 }
 
+.li__icon {
+  width: 2vw;
+}
+
 .nav__a {
   text-decoration: none;
   color: var(--color-texto3);
-  font-size: 14px;
+  font-size: 1.6vw;
   font-family: var(--manrope);
+  cursor: pointer;
 }
 
 .nav__a-active {
   color: var(--color-texto2);
   font-weight: 700;
+  padding-bottom: 7px;
+  border-bottom: 4px solid var(--color-texto2);
+  border-radius: 0.13rem;
 }
 
-.nav__rectangle {
+.darling {
+  color: #f5d38e;
+  font-family: var(--cormorant);
+  font-size: 3vw;
+  line-height: 4.5vw;
   position: absolute;
-  width: 70px;
-  height: 4px;
-  top: 39px;
-  left: 0;
-  background-color: #f2c66d;
-  border-radius: 2px;
-  margin-left: 777px;
-  margin-top: 8px;
+  left: 5vw;
+  top: 50%;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(1, 1) translateY(-50%);
 }
 
 .section1__parrafo {
@@ -775,6 +780,49 @@ label {
   transform: rotate(0deg) scale(1, 1);
 }
 
+/* -----------------------    MODAL CAR --------------------------------------- */
+.modal-navbar {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 250px;
+  height: 100vh;
+  padding: 28px 24px;
+}
+.modal-navbar__background {
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  display: none;
+}
+.modal-navbar__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  list-style: none;
+  margin-top: 50px;
+}
+.modal-navbar__link {
+  text-decoration: none;
+  color: hsl(220deg, 13%, 13%);
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.modal-navbar__close-icon:hover {
+  cursor: pointer;
+}
+.show {
+  display: flex;
+  justify-content: flex-end;
+}
+.display-none {
+  display: none;
+}
+
 /********************** MEDIA QUERYS *****************************/
 @media screen and (max-width: 1366px) {
   .homepage {
@@ -908,7 +956,7 @@ label {
   }
 
   /*------------ SECTION 3 Y 5 -------------*/
-  .featured{
+  .featured {
     margin-left: 8%;
   }
 
@@ -923,7 +971,7 @@ label {
     padding: 5% 15%;
     margin-top: 10%;
   }
-  
+
   .card__content {
     width: 45%;
     margin-left: 4%;
@@ -1249,8 +1297,7 @@ label {
   }
 }
 
-/************************************************/
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 600px) {
   .nav__ul {
     display: none;
   }
@@ -1264,17 +1311,13 @@ label {
     padding-right: 2%;
   }
 
-  .nav__rectangle {
-    display: none;
-  }
-
-  .nav__ul > img {
-    width: 16%;
-    height: 18%;
-  }
-
   .nav__a {
     font-size: 0.7rem;
+  }
+
+  .nav__a-active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--color-texto2);
   }
 
   input:checked ~ .nav__ul {
@@ -1282,8 +1325,10 @@ label {
     display: flex;
     flex-direction: column;
     top: 70%;
-    right: -80%;
-    width: 70%;
+    width: 30%;
+    gap: 0.2vw;
+    text-align: center;
+    z-index: 1;
   }
 
   .button_menu {
@@ -1337,13 +1382,18 @@ label {
     padding: 2%;
     list-style: none;
     border-bottom: 1px solid grey;
+    background: #1f8171;
   }
 
   /*Estilo cuando el mouse pasa encima de cada link del menu*/
   li:hover {
+    font-size: 4vw;
     filter: brightness(110%);
   }
+}
 
+/************************************************/
+@media screen and (max-width: 360px) {
   .section1__parrafo {
     width: 100%;
     height: 10%;
@@ -1429,7 +1479,8 @@ label {
 
   /* ----------SECTION 3 Y 5 ---------*/
   .content {
-    flex-direction: column;  }
+    flex-direction: column;
+  }
 
   .featured {
     margin-top: 68%;
@@ -1586,74 +1637,73 @@ label {
 
   /*----------- SECTION 7 ------------*/
 
- .section7__container {
-  flex-direction: column;
-  margin-left: 0%;
-  height: 100%;
-}
+  .section7__container {
+    flex-direction: column;
+    margin-left: 0%;
+    height: 100%;
+  }
 
-.s7 {
-  margin-left: 5%;
-  text-align: center;
-}
+  .s7 {
+    margin-left: 5%;
+    text-align: center;
+  }
 
-.section7__title {
-  font-size: 1.8rem;
-  margin-left: -5%;
-}
+  .section7__title {
+    font-size: 1.8rem;
+    margin-left: -5%;
+  }
 
-.section7__p {
-  margin-top: -5%;
-  margin-left: 10%;
-  font-size: 0.7rem;
-  width: 70%;
-}
+  .section7__p {
+    margin-top: -5%;
+    margin-left: 10%;
+    font-size: 0.7rem;
+    width: 70%;
+  }
 
-.section7__card img {
-  width: 55%;
-  margin-left: 22.5%;
-}
+  .section7__card img {
+    width: 55%;
+    margin-left: 22.5%;
+  }
 
-.section7__card {
-  margin-top: 3%;
-  margin-left: 1%;
-  width: 70%;
-  height: 66%;
-  flex-direction: column;
-}
+  .section7__card {
+    margin-top: 3%;
+    margin-left: 1%;
+    width: 70%;
+    height: 66%;
+    flex-direction: column;
+  }
 
-.section7__card__p {
-  width: 90%;
-  margin-top: 5%;
-  margin-left: 7%;
-  margin-bottom: 12%;
-  font-size: 0.7rem;
-  line-height: 150%;
-}
+  .section7__card__p {
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 7%;
+    margin-bottom: 12%;
+    font-size: 0.7rem;
+    line-height: 150%;
+  }
 
-.section7__card__h3 {
-  margin-left: 7%;
-  font-size: 0.8rem;
-  margin-bottom: -3%;
-}
+  .section7__card__h3 {
+    margin-left: 7%;
+    font-size: 0.8rem;
+    margin-bottom: -3%;
+  }
 
-.section7__card__country {
-  margin-left: 7%;
-  font-size: 0.7rem;
+  .section7__card__country {
+    margin-left: 7%;
+    font-size: 0.7rem;
+  }
 
-}
+  .section7__card__button {
+    margin-left: 40%;
+  }
 
-.section7__card__button {
-  margin-left: 40%;
-}
-
-.section7_button {
-  width: 40%;
-  height: 40%;
-  margin-top: 90%;
-  padding: 5%;
-  margin-right: 18%;
-}
+  .section7_button {
+    width: 40%;
+    height: 40%;
+    margin-top: 90%;
+    padding: 5%;
+    margin-right: 18%;
+  }
 
   /* FOOTER */
 

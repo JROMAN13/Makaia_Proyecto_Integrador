@@ -29,7 +29,7 @@ elementsFilters.forEach((element, index) => {
 
     console.log(selectedValue);
 
-    /* ---------------  FILTRAR CON EL TIPO SELECCIONADO ------------   */
+    /* ---------------  FILTRAR POR EL TIPO SELECCIONADO ------------   */
 
     const filterProducts = (array, selectedValue) => {
       array.forEach((card) => {
@@ -86,3 +86,21 @@ document.getElementById("sortByPrice").addEventListener("change", () => {
   parentContainer.innerHTML = "";
   cardList.forEach((card) => parentContainer.appendChild(card));
 });
+
+
+/* --------------REDIRECCIONAR AL DAR CLIC EN UNA IMAGEN A DETAILS ------------   */
+
+const goToDetailsProduct = () => {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      console.log("Click card");
+      // const idProduct = card.getAttribute("name");
+      // localStorage.setItem("idProduct", JSON.stringify(idProduct));
+      location.href = "./details.html";
+    });
+  });
+};
+
+goToDetailsProduct();

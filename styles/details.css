@@ -23,7 +23,7 @@
 }
 
 .section1 {
-  background: #093931; 
+  background: #093931;
   padding: 2vw;
 }
 
@@ -32,35 +32,35 @@ label {
   display: none;
 }
 
-.header{
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header__p{
+.header__p {
   color: #f5d38e;
   font-family: var(--cormorant);
   font-size: 3vw;
-  line-height: 4.5vw;  
+  line-height: 4.5vw;
   margin-left: 3vw;
 }
 
-.header__nav{
+.header__nav {
   display: flex;
 }
 
 .nav__ul {
   display: flex;
   gap: 2.2vw;
-  margin-right: 5vw;  
+  margin-right: 5vw;
 }
 
 .nav__li {
   list-style-type: none;
 }
 
-.li__icon{
+.li__icon {
   width: 2.5vw;
 }
 
@@ -186,9 +186,8 @@ label {
 .heart-1 {
   width: 3vw;
   height: 2vw;
-  position: absolute;
-  left: 38vw;
-  top: 1vw;
+  margin-left: -4vw;
+  margin-top: 1vw; 
   transform: translate(0px, 0px);
   overflow: visible;
 }
@@ -350,6 +349,13 @@ label {
   line-height: 3vw;
   font-weight: 400;
   margin-top: 4%;
+  cursor: pointer;
+}
+
+.input__number {
+  display: block;
+  border: none;
+  background: #f3f4f6;
 }
 
 .btn__add {
@@ -363,6 +369,7 @@ label {
   height: 4vw;
   overflow: hidden;
   margin-top: 2%;
+  cursor: pointer;
 }
 
 .add__text {
@@ -805,17 +812,16 @@ label {
   margin-left: 9vw;
 }
 
-
 /* -----------------------    MODAL CAR --------------------------------------- */
 .modal-navbar {
   background-color: hsl(0deg, 0%, 100%);
-  width: 250px;
+  width: 31vw;
   height: 100vh;
-  padding: 28px 24px;
+  padding: 2vw;
 }
 .modal-navbar__background {
   background-color: hsla(0deg, 0%, 0%, 0.5);
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -824,20 +830,7 @@ label {
   overflow: hidden;
   display: none;
 }
-.modal-navbar__items {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 200px;
-  list-style: none;
-  margin-top: 50px;
-}
-.modal-navbar__link {
-  text-decoration: none;
-  color: hsl(220deg, 13%, 13%);
-  font-weight: 700;
-  font-size: 1.1em;
-}
+
 .modal-navbar__close-icon:hover {
   cursor: pointer;
 }
@@ -845,15 +838,103 @@ label {
   display: flex;
   justify-content: flex-end;
 }
-.display-none{
+.display-none {
   display: none;
 }
 
+.container1__title {
+  color: #171a1f;
+  font-family: var(--cormorant);
+  font-size: 1.39vw;
+  font-weight: 700;
+  line-height: 1vw;
+}
+
+.section2__container1 {
+  margin-top: 3vw;
+  width: 100%;
+  display: flex;
+}
+
+.container1__imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+  margin-top: 1.4vw;
+  width: 40%;
+}
+
+.container1__img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.container__summary {
+  width: 100%;
+}
+
+.summary__container__texts {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5vw;
+  margin-top: 2.7vw;
+}
+
+.texts {
+  color: #171a1f;
+  font-family: var(--manrope);
+  font-size: 1.3vw;
+  font-weight: 700;
+  line-height: 1.5vw;
+}
+
+.texts__code {
+  color: #565e6c;
+  font-size: 1.14vw;
+  font-weight: 400;
+}
+
+.summary__icon__trash {
+  width: 1.6vw;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.texts-trash {
+  margin-top: 1vw;
+}
+
+.contain__total{
+  width: 100%;
+  margin-top: 20vh;
+}
+
+.summary__items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5vw;
+}
+
+.payment__btn{
+  margin-top: 2vw;
+  border-radius: 22px;
+  background: #0d554a;
+  width: 100%;
+  display: inline-flex;
+  padding: 1vw;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-texto3);
+  font-weight: 400;
+  font-size: 1.4vw;
+  border: none;
+  cursor: pointer;
+}
 
 /* -------------------- RESPONSIVE------------------ */
 
-@media screen and (max-width:1000px) {
-  .container__s2{
+@media screen and (max-width: 1000px) {
+  .container__s2 {
     display: flex;
     flex-direction: column;
   }
@@ -863,20 +944,23 @@ label {
     justify-content: center;
   }
 
-  .container__options{
+  .container__options {
     margin-left: 5vw;
-  }  
+  }
 }
 
-@media screen and (max-width:628px){
-  .image-52{
+@media screen and (max-width: 628px) {
+  .image-52 {
     width: 70%;
     height: auto;
   }
 }
 
-@media screen and (max-width:600px){
-  .image-53, .image-54, .image-55, .image-5{
+@media screen and (max-width: 600px) {
+  .image-53,
+  .image-54,
+  .image-55,
+  .image-5 {
     max-width: 50px;
   }
 
@@ -897,17 +981,16 @@ label {
     font-size: 0.7rem;
   }
 
-  .nav__a-active{
+  .nav__a-active {
     padding-bottom: 2px;
     border-bottom: 2px solid var(--color-texto2);
-
   }
 
   input:checked ~ .nav__ul {
     position: absolute;
     display: flex;
     flex-direction: column;
-    top: 70%;    
+    top: 70%;
     width: 30%;
     gap: 0.2vw;
     text-align: center;
@@ -974,4 +1057,3 @@ label {
     filter: brightness(110%);
   }
 }
-
