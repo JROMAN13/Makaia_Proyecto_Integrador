@@ -2,13 +2,13 @@
 // unitario, tipo de accesorio (anillo, brazalete, collar, aretes, etc.), imágenes, descripción,
 // cantidad en stock por color y/o talla.
 
-const products = [
+export const products = [
   {
     id: 1,
     name: "Luxury Gems Necklace",
     price: 168.76,
-    type: "collar",
-    image: "assets/img/s3_img1.png",
+    type: "Necklaces",
+    image: "../assets/img/img_view2/img1.png",
     description: "Lorem Gems",
     stockSize: {
       30: 5,
@@ -20,8 +20,8 @@ const products = [
     id: 2,
     name: "Aurora Ring",
     price: 125.28,
-    type: "ring",
-    image: "assets/img/s3_img2.png",
+    type: "Rings",
+    image: "../assets/img/img_view2/img2.png",
     description: "Lorem Ring",
     stockSize: {
       6: 4,
@@ -33,8 +33,8 @@ const products = [
     id: 3,
     name: "Reflections Necklace",
     price: 620.73,
-    type: "bracelet",
-    image: "assets/img/s3_img3.png",
+    type: "Bracelets",
+    image: "../assets/img/img_view2/Img3.png",
     description: "Lorem Bracelent",
     stockSize: {
       14: 2,
@@ -46,8 +46,8 @@ const products = [
     id: 4,
     name: "Serene Solitaire Earrings",
     price: 125.28,
-    type: "earrings",
-    image: "assets/img/s3_img4.png",
+    type: "Earrings",
+    image: "../assets/img/img_view2/img4.png",
     description: "Lorem Earrings",
     stockSize: {
       10: 4,
@@ -59,8 +59,8 @@ const products = [
     id: 5,
     name: "Divine Diamonds",
     price: 540.13,
-    type: "earrings",
-    image: "assets/img/s3_img5.png",
+    type: "Earrings",
+    image: "../assets/img/img_view2/img5.png",
     description: "Lorem Diamond",
     stockSize: {
       11: 3,

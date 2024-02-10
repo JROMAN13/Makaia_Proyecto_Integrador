@@ -1,58 +1,58 @@
+import { products } from "../index.js";
+
+/* --------------- GENERAR DINAMICAMENTE LAS TARJETAS ------------   */
+let containerCards = document.querySelector(".container__cards");
+console.log(containerCards);
+const insertarProductos = (contenedor, listaProductos) => {
+  contenedor.innerHTML = "";
+  listaProductos.forEach((producto) => {
+    contenedor.innerHTML += `
+        <article class="card" name=${producto.id}>
+            <figure>
+                <img src=${producto.image} alt=${producto.nombre}>
+            </figure>  
+            <div>
+              <h3 class="card__h3">${producto.name}</h3>
+              <span class="card__price">$ ${producto.price.toLocaleString()}</span>            
+            </div>          
+            
+        </article>
+        `;
+  });
+};
+
+insertarProductos(containerCards, products);
+
 let cardList = document.querySelectorAll(".card");
 cardList = [...cardList];
-console.log(cardList);
 
-let elementsFilters = document.querySelectorAll(".nav__li__a");
-elementsFilters = [...elementsFilters];
 
-let values = elementsFilters.map((element) => element.textContent);
-console.log(values);
+/* ---------------  FILTRAR POR EL TIPO SELECCIONADO ------------   */
 
-let cardsh3 = document.querySelectorAll(".card__h3");
-cardsh3 = [...cardsh3];
-const valuesh3 = cardsh3.map((element) => element.textContent);
-console.log(valuesh3);
+const filterNav = document.querySelector(".filter__nav");
+filterNav.addEventListener("click", (event) => {
+  event.preventDefault();
 
-elementsFilters.forEach((element, index) => {
-  element.addEventListener("click", (e) => {
-    e.preventDefault();
-    let selectedValue = values[index].toLowerCase();
+  if (event.target.classList.contains("nav__li__a")) {
+    // Remover la clase nav__li__a-active de todos los enlaces
+    const navLinks = filterNav.querySelectorAll(".nav__li__a");
+    navLinks.forEach((link) => link.classList.remove("nav__li__a-active"));
 
-    // Añadir la clase nav__li__a-active al elemento clicado y quitarla de los demás
-    elementsFilters.forEach((otherElement, otherIndex) => {
-      if (index === otherIndex) {
-        element.classList.add("nav__li__a-active");
-      } else {
-        otherElement.classList.remove("nav__li__a-active");
-      }
-    });
+    // Agregar la clase nav__li__a-active al enlace seleccionado
+    event.target.classList.add("nav__li__a-active");
 
-    console.log(selectedValue);
+    const productType = event.target.textContent;
+    let filteredProducts = [];
 
-    /* ---------------  FILTRAR POR EL TIPO SELECCIONADO ------------   */
-
-    const filterProducts = (array, selectedValue) => {
-      array.forEach((card) => {
-        const h3Text = card.querySelector(".card__h3").textContent.toLowerCase();
-
-        // Función para manejar variaciones plurales
-        const handlePlurals = (word) => (word.endsWith("s") ? [word, word.slice(0, -1)] : [word]);
-
-        const selectedWords = handlePlurals(selectedValue).map((word) => word.toLowerCase());
-
-        // Mostrar la tarjeta si alguna palabra de selectedValue está contenida en h3Text
-        const matches = selectedWords.some((word) => h3Text.includes(word));
-
-        if (selectedValue === "all" || matches) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    };
-
-    filterProducts(cardList, selectedValue);
-  });
+    if (productType === "All") {
+      // Si se selecciona "All", mostrara todos los productos
+      insertarProductos(containerCards, products);
+    } else {
+      // Filtrar el array de productos según el tipo del enlace clickeado
+      filteredProducts = products.filter((product) => product.type === productType);
+      insertarProductos(containerCards, filteredProducts);
+    }
+  }
 });
 
 /* ---------------  BUSCANDO CON EL INPUT ------------   */
@@ -87,7 +87,6 @@ document.getElementById("sortByPrice").addEventListener("change", () => {
   cardList.forEach((card) => parentContainer.appendChild(card));
 });
 
-
 /* --------------REDIRECCIONAR AL DAR CLIC EN UNA IMAGEN A DETAILS ------------   */
 
 const goToDetailsProduct = () => {
@@ -96,11 +95,11 @@ const goToDetailsProduct = () => {
   cards.forEach((card) => {
     card.addEventListener("click", () => {
       console.log("Click card");
-      // const idProduct = card.getAttribute("name");
-      // localStorage.setItem("idProduct", JSON.stringify(idProduct));
+      const idProduct = card.getAttribute("name");
+      localStorage.setItem("idProduct", JSON.stringify(idProduct));
       location.href = "./details.html";
-    });
-  });
+    });
+  });
 };
 
 goToDetailsProduct();
