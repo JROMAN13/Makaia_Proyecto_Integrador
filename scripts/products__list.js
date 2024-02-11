@@ -1,8 +1,22 @@
-import { products } from "../index.js";
+// import { products } from "../index.js";
+
+const URL_BASE = "https://makaia-proyecto-integrador-backend-dev-mdfc.3.us-1.fl0.io/";
+
+const getproducts = async (url) => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return [];
+  }
+};
 
 /* --------------- GENERAR DINAMICAMENTE LAS TARJETAS ------------   */
 let containerCards = document.querySelector(".container__cards");
 console.log(containerCards);
+
 const insertarProductos = (contenedor, listaProductos) => {
   contenedor.innerHTML = "";
   listaProductos.forEach((producto) => {
@@ -21,16 +35,10 @@ const insertarProductos = (contenedor, listaProductos) => {
   });
 };
 
-insertarProductos(containerCards, products);
-
-let cardList = document.querySelectorAll(".card");
-cardList = [...cardList];
-
-
 /* ---------------  FILTRAR POR EL TIPO SELECCIONADO ------------   */
 
 const filterNav = document.querySelector(".filter__nav");
-filterNav.addEventListener("click", (event) => {
+filterNav.addEventListener("click", async (event) => {
   event.preventDefault();
 
   if (event.target.classList.contains("nav__li__a")) {
@@ -42,50 +50,59 @@ filterNav.addEventListener("click", (event) => {
     event.target.classList.add("nav__li__a-active");
 
     const productType = event.target.textContent;
-    let filteredProducts = [];
 
-    if (productType === "All") {
-      // Si se selecciona "All", mostrara todos los productos
-      insertarProductos(containerCards, products);
-    } else {
-      // Filtrar el array de productos según el tipo del enlace clickeado
-      filteredProducts = products.filter((product) => product.type === productType);
-      insertarProductos(containerCards, filteredProducts);
+    try {
+      const url = `${URL_BASE}products`;
+      const productos = await getproducts(url);
+
+      let filteredProducts = [];
+
+      if (productType === "All") {
+        insertarProductos(containerCards, productos);
+      } else {
+        // Filtrar el array de productos según el tipo del enlace clickeado
+        filteredProducts = productos.filter((product) => product.type === productType);
+        insertarProductos(containerCards, filteredProducts);
+      }
+    } catch (error) {
+      console.log(error);
     }
   }
 });
 
 /* ---------------  BUSCANDO CON EL INPUT ------------   */
+const handleSearchInput = (cardList) => {
+  const inputSearch = document.querySelector(".buscador__text");
 
-const inputSearch = document.querySelector(".buscador__text");
+  inputSearch.addEventListener("input", (e) => {
+    const searchTerm = e.target.value.toLowerCase();
 
-inputSearch.addEventListener("input", (e) => {
-  const searchTerm = e.target.value.toLowerCase();
+    cardList.forEach((card) => {
+      const cardText = card.textContent.toLowerCase();
 
-  cardList.forEach((card) => {
-    const cardText = card.textContent.toLowerCase();
-
-    card.style.display = cardText.includes(searchTerm) ? "block" : "none";
+      card.style.display = cardText.includes(searchTerm) ? "block" : "none";
+    });
   });
-});
+};
 
 /* ---------------  ORDENAR POR PRECIO ------------   */
+const sortByPriceChangeHandler = (cardList) => {
+  document.getElementById("sortByPrice").addEventListener("change", () => {
+    let sortBy = document.getElementById("sortByPrice").value;
+    
+    let parentContainer = document.querySelector(".container__cards");
 
-document.getElementById("sortByPrice").addEventListener("change", () => {
-  let sortBy = document.getElementById("sortByPrice").value;
+    cardList.sort((a, b) => {
+      let priceA = parseFloat(a.querySelector(".card__price").textContent.replace("$", "").trim());
+      let priceB = parseFloat(b.querySelector(".card__price").textContent.replace("$", "").trim());
 
-  let parentContainer = document.querySelector(".container__cards");
+      return sortBy === "lower" ? priceA - priceB : priceB - priceA;
+    });
 
-  cardList.sort((a, b) => {
-    let priceA = parseFloat(a.querySelector(".card__price").textContent.replace("$", "").trim());
-    let priceB = parseFloat(b.querySelector(".card__price").textContent.replace("$", "").trim());
-
-    return sortBy === "lower" ? priceA - priceB : priceB - priceA;
+    parentContainer.innerHTML = "";
+    cardList.forEach((card) => parentContainer.appendChild(card));
   });
-
-  parentContainer.innerHTML = "";
-  cardList.forEach((card) => parentContainer.appendChild(card));
-});
+};
 
 /* --------------REDIRECCIONAR AL DAR CLIC EN UNA IMAGEN A DETAILS ------------   */
 
@@ -102,4 +119,17 @@ const goToDetailsProduct = () => {
   });
 };
 
-goToDetailsProduct();
+document.addEventListener("DOMContentLoaded", async () => {
+  const url = `${URL_BASE}products`;
+  const productos = await getproducts(url);
+  // console.log(productos);
+  insertarProductos(containerCards, productos);
+
+  let cardList = document.querySelectorAll(".card");
+  cardList = [...cardList];
+  console.log(cardList);
+
+  goToDetailsProduct();
+  handleSearchInput(cardList);
+  sortByPriceChangeHandler(cardList);
+});

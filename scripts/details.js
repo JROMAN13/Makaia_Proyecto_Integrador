@@ -1,13 +1,26 @@
-import { products } from "../index.js";
+// import { products } from "../index.js";
 
 console.log("READY");
 const idProduct = JSON.parse(localStorage.getItem("idProduct"));
+const URL_BASE = "https://makaia-proyecto-integrador-backend-dev-mdfc.3.us-1.fl0.io/";
 
-const selectedProduct = products.find((product) => product.id == idProduct);
-console.log(selectedProduct);
+const getProduct = async (url, id) => {
+  try {
+    const response = await fetch(`${url}/${id}`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
 
 
-/* ------- SEGUN EL PRODUTO SELECCIONADO MOSTRAR LA INFORMACION(IMAGEN,NOMBRE,PRECIO) -----*/
+// const selectedProduct = products.find((product) => product.id == idProduct);
+// console.log(selectedProduct);
+
+
+/* ------- SEGUN EL PRODUCTO SELECCIONADO MOSTRAR LA INFORMACION(IMAGEN,NOMBRE,PRECIO) -----*/
 const printDetailsProduct = (product) => {
   const figureImg = document.querySelector(".image-52");
   const nameProduct = document.querySelector(".luxury-charms-ring");
@@ -54,12 +67,8 @@ minusBtn.addEventListener("click", () => {
 
 
 
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", async () => {
+  const url = `${URL_BASE}products`;
+  const selectedProduct = await getProduct(url, idProduct);
   printDetailsProduct(selectedProduct);
 });

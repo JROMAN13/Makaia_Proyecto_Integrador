@@ -150,8 +150,7 @@ label {
 
 .image-52 {
   border-radius: 8px;
-  width: 100%;
-  max-width: 477px;
+  width: 30vw;  
   height: auto;
   object-fit: cover;
   margin-left: -1.3vw;
@@ -194,7 +193,7 @@ label {
 
 .container__options {
   margin-top: 2vw;
-  margin-left: 10vw;
+  margin-left: 2vw;
   padding: 1vw;
 }
 
