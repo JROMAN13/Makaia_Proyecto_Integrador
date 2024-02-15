@@ -22,7 +22,7 @@ const insertarProductos = (contenedor, listaProductos) => {
   listaProductos.forEach((producto) => {
     contenedor.innerHTML += `
         <article class="card" name=${producto.id}>
-            <figure>
+            <figure class= "card_img">
                 <img src=${producto.image} alt=${producto.nombre}>
             </figure>  
             <div>

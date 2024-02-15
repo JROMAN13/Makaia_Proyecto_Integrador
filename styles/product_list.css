@@ -71,9 +71,9 @@ label {
   list-style-type: none;
 }
 
-.li__icon {
-  width: 2.5vw;
-}
+/* .li__icon {
+  width: 2vw;
+} */
 
 .nav__a {
   text-decoration: none;
@@ -254,7 +254,7 @@ input.image_buscar {
   cursor: pointer;
 }
 
-.card img {
+.card_img {
   width: 100%;
   height: 75%;
 }

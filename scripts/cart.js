@@ -46,9 +46,6 @@ console.log("READY");
      summaryTexts.appendChild(iconContainer);
      summaryContainer.appendChild(summaryTexts);
  });
-
-
-
 /* ------------------------  ABRIR MODAL CART -------------------------------------- */
 
 const cartIconBtn = document.getElementById("btnShopping");
