@@ -15,7 +15,7 @@ const getproducts = async (url) => {
 
 /* --------------- GENERAR DINAMICAMENTE LAS TARJETAS ------------   */
 let containerCards = document.querySelector(".container__cards");
-console.log(containerCards);
+// console.log(containerCards);
 
 const insertarProductos = (contenedor, listaProductos) => {
   contenedor.innerHTML = "";
@@ -121,13 +121,11 @@ const goToDetailsProduct = () => {
 
 document.addEventListener("DOMContentLoaded", async () => {
   const url = `${URL_BASE}products`;
-  const productos = await getproducts(url);
-  // console.log(productos);
+  const productos = await getproducts(url); 
   insertarProductos(containerCards, productos);
 
   let cardList = document.querySelectorAll(".card");
-  cardList = [...cardList];
-  console.log(cardList);
+  cardList = [...cardList];  
 
   goToDetailsProduct();
   handleSearchInput(cardList);

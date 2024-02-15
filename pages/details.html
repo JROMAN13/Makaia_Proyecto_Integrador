@@ -8,6 +8,12 @@
   </head>
   <body>
     <div class="homepage">
+      <div class="modal-navbar__background">
+        <nav class="modal-navbar" aria-label="">         
+            <img class="modal-navbar__close-icon" src="../assets/img/icon-close.svg" alt="">          
+          
+        </nav>
+      </div>
       <section class="section1">       
 
         <header class="header">
@@ -23,7 +29,10 @@
               <li class="nav__li"><a href="#" class="nav__a">About</a></li>
               <li class="nav__li"><a href="#" class="nav__a">Contact</a></li>
               <li class="nav__li"><a href="#" class="nav__a"><img src="../assets/img/Profile1.png" class="li__icon" alt=""/></a></li>
-              <li class="nav__li"><a href="#" class="nav__a"><img src="../assets/img/Shopping.png" class="li__icon" id="btnShopping" alt=""/></a></li>            
+              <div class="header__cart">
+                <li class="nav__li"><a href="#" class="nav__a"><img src="../assets/img/Shopping.png" class="li__icon" id="btnShopping" alt=""/></a></li>
+                <div class="header__cart--notification">0</div>
+              </div>                        
               
             </ul>
   
@@ -59,8 +68,8 @@
             <div class="price">$620.73</div>
             <div class="color-rose-gold">Color - Rose Gold</div>
             <div class="container__ovals">
-              <div class="oval oval-1"></div>
-              <div class="oval oval-2"></div>
+              <div class="oval oval-1" data-value="gray"></div>
+              <div class="oval oval-2" data-value="rose"></div>
             </div>
 
             <div class="container__size">
@@ -98,15 +107,15 @@
             </div>
 
             <div class="container__quantity">
-              <div class="btn__add">
+              <button class="btn__add" type="submit" id="details__button">
                 <img src="../assets/img/v3/add_shopping.svg" class="add__icono" alt="" />
                 <div class="add__text">Add to bag</div>
-              </div>
-              <div class="btn__add">
+              </button>
+              <button class="btn__add">
                 <div class="add__text add__text-buy">Buy now</div>
-              </div>
+              </button>
             </div>
-
+            
             <div class="container__services">
               <div class="text__services">Delivery</div>
               <img src="../assets/img/v3/icon_down.svg" class="icon__down" alt="" />
@@ -265,99 +274,11 @@
         </div>
        
         
-      </footer>
-
-       <!-- inicio modal navbar -->
-       <!-- <div class="modal-navbar__background">
-        <nav class="modal-navbar" aria-label="">
-        <img class="modal-navbar__close-icon" src="../assets/img/icon-close.svg" alt="" srcset="">
-        <div class="section2__container1">
-          <div class="container1__imgs">            
-            <img src="../assets/img/v4/s1_img1.png" class="container1__img" alt="" />
-            <img src="../assets/img/v4/s1_img2.png" class="container1__img" alt="" />
-            <img src="../assets/img/v4/s1_img3.png" class="container1__img" alt="" />
-          </div>
-
-          <div class="container__summary">
-            <div class="summary__container__texts">
-              <div>
-                <h3 class="texts">Luxury Charms Ring</h3>
-                <h6 class="texts texts__code">Code: 78205</h6>
-                <h3 class="texts">$620.73</h3>
-              </div>
-              
-              <div class="container__icon">
-                <img src="../assets/img/v4/trash.svg" alt="" class="summary__icon__trash" />
-                <h6 class="texts texts-trash">x1</h6>
-              </div>
-            </div>
-
-            <div class="summary__container__texts">
-              <div>
-                <h3 class="texts">Luxury Charms Ring</h3>
-                <h6 class="texts texts__code">Code: 78205</h6>
-                <h3 class="texts">$620.73</h3>
-              </div>
-              
-              <div class="container__icon">
-                <img src="../assets/img/v4/trash.svg" alt="" class="summary__icon__trash" />
-                <h6 class="texts texts-trash">x1</h6>
-              </div>
-
-            </div>
-
-            <div class="summary__container__texts">
-              <div>
-                <h3 class="texts">Luxury Charms Ring</h3>
-                <h6 class="texts texts__code">Code: 78205</h6>
-                <h3 class="texts">$620.73</h3>
-              </div>
-              
-              <div class="container__icon">
-                <img src="../assets/img/v4/trash.svg" alt="" class="summary__icon__trash" />
-                <h6 class="texts texts-trash">x1</h6>
-              </div>
-            </div>
-          </div>
-         
-        </div>
-        <div class="contain__total">
-          <div class="summary__items summary__items-total">
-            <h6 class="texts texts__code">Total</h6>
-            <h4 class="texts texts__items texts__items-total">$1058.72</h4>
-          </div>
-          <button class="payment__btn texts">Continue to checkout</button>
-        </div>        
-      
-      </nav>
-      </div>  -->
-      <!-- final modal navbar -->
-
-      <div class="modal-navbar__background">
-        <nav class="modal-navbar" aria-label="">
-            <img class="modal-navbar__close-icon" src="../assets/img/icon-close.svg" alt="" srcset="">
-            <div class="section2__container1">
-                <div class="container1__imgs" id="imageContainer">
-                    <!-- Imágenes se generarán dinámicamente aquí -->
-                </div>
-    
-                <div class="container__summary" id="summaryContainer">
-                    <!-- Summary se generará dinámicamente aquí -->
-                </div>
-             
-            </div>
-            <div class="contain__total">
-                <div class="summary__items summary__items-total">
-                    <h6 class="texts texts__code">Total</h6>
-                    <h4 class="texts texts__items texts__items-total">$1058.72</h4>
-                </div>
-                <button class="payment__btn texts">Continue to checkout</button>
-            </div>        
-        </nav>
-    </div>
-
+      </footer>  
+       
     </div>
     <script src="../scripts/details.js" type="module"></script>
-    <script src="../scripts/cart.js"></script> 
+    <script src="../scripts/cart.js" type="module"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
